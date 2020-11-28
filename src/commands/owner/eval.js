@@ -1,7 +1,7 @@
 const { inspect } = require('util');
 
 module.exports.run = async (args,msg,client,Discord,configFile) => {
-    if (msg.author.id !== configFile.ownerId) return msg.channel.send("You have no permission to do it.");
+    if (msg.author.id !== configFile.ownerId) return msg.channel.send("You have no permission to do it!");
     try {
        let evaled = await eval(args.join(" "));
        msg.channel.send(inspect(evaled));
