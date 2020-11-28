@@ -42,10 +42,9 @@ client.on('message', msg =>{ // when someone sends a message
     let args = msg.content.substring(msg.content.indexOf(configFile.prefix)+1).split(new RegExp(/\s+/)); // arguments after the command
     const commandName = args.shift().toLowerCase(); // the given command
 
-    if (client.commands.get(commandName)){ // checks if the command exists
-        client.commands.get(commandName).run(args,msg,client,Discord,configFile); // run the command with arguments, the message, the bot and the djs object
-    } else if(client.commands.get(client.aliases.get(commandName))) { // if the user input was an alias
-        client.commands.get(client.aliases.get(commandName)).run(args,msg,client,Discord,configFile); // does the same thing as above, but check
+    let command = client.commands.get(commandName) || client.commands.get(client.aliases.get(commandName));
+    if (command) {
+        command.run(args,msg,client,Discord,configFile); // run the command with arguments, the message, the bot and the djs object
     } else { // if the command doesn't exist, the bot will say it
         const embed = new Discord.MessageEmbed()
                 .setColor(configFile.color)
