@@ -1,0 +1,27 @@
+{
+  "name": "simplediscordbot",
+  "version": "1.0.0",
+  "description": "A simple Discord bot, made with discord.js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karma443/simplediscordbot.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "bot"
+  ],
+  "author": "karma443",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karma443/simplediscordbot/issues"
+  },
+  "homepage": "https://github.com/karma443/simplediscordbot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
