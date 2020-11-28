@@ -2,7 +2,7 @@
   "name": "simplediscordbot",
   "version": "1.0.0",
   "description": "A simple Discord bot, made with discord.js",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
